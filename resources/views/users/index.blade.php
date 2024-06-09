@@ -17,6 +17,7 @@
                                 <th>No Telepon</th>
                                 <th>Alamat</th>
                                 <th>tanggal lahir</th>
+                                <th>Role</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -28,6 +29,7 @@
                                 <td>{{$d->no_telp}}</td>
                                 <td>{{$d->alamat}}</td>
                                 <td>{{$d->tgl_lahir}}</td>
+                                <td>{{$d->role}}</td>
                                 <td>
                                     <a href="{{route('users.edit',['id'=>$d->id])}}" class="bg-transparent hover:bg-orange-500 text-black-700 font-semibold hover:text-white py-2 px-4 border border-black-500 hover:border-transparent rounded"> Edit</a>
                                     <a href="{{route('users.destroy',['id'=>$d->id])}}" class="bg-transparent hover:bg-red-500 text-black-700 font-semibold hover:text-white py-2 px-4 border border-black-500 hover:border-transparent rounded"> Delete</a>

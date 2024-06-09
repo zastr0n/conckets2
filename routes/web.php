@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\TicketController;
+use App\Http\Controllers\PemesananController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,6 +25,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/users/{id}', [UsersController::class, 'edit'])->name('users.edit');
     Route::post('/users', [UsersController::class, 'update'])->name('users.update');
     Route::get('/users-delete/{id}', [UsersController::class, 'destroy'])->name('users.destroy');
+    //route ticket
+    Route::get('/tickets', [TicketController::class, 'index'])->name('tickets');
+    Route::get('/create-tickets', [TicketController::class, 'add'])->name('tickets.add');
+    Route::post('/create-tickets', [TicketController::class, 'create'])->name('tickets.create');
+    Route::get('/tickets/{id}', [TicketController::class, 'edit'])->name('tickets.edit');
+    Route::post('/tickets', [TicketController::class, 'update'])->name('tickets.update');
+    Route::get('/tickets-delete/{id}', [TicketController::class, 'destroy'])->name('tickets.destroy');
+    //route transaksi
+    Route::get('/transaksi', [PemesananController::class, 'index'])->name('transaksi');
+    Route::get('/transaksi/update', [PemesananController::class, 'update'])->name('transaksi.update');
 });
 
 require __DIR__ . '/auth.php';

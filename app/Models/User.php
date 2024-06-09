@@ -23,6 +23,7 @@ class User extends Authenticatable
         'no_telp',
         'tgl_lahir',
         'password',
+        'role',
     ];
 
     /**
