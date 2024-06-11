@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -28,6 +29,7 @@ class UsersController extends Controller
             'alamat' => ['required'],
             'no_telp' => ['required', 'unique:users', 'numeric'],
             'tgl_lahir' => ['required'],
+            'role' => ['required', 'in:admin,user'],
         ]);
         $user = new User();
         $user->name = $request->name;
@@ -56,6 +58,7 @@ class UsersController extends Controller
             'alamat' => ['required'],
             'no_telp' => ['required'],
             'tgl_lahir' => ['required'],
+            'role' => ['required', 'in:admin,user'],
         ]);
 
         $data = User::find($request->id);
@@ -64,6 +67,7 @@ class UsersController extends Controller
         $data->alamat = $validated['alamat'];
         $data->no_telp = $validated['no_telp'];
         $data->tgl_lahir = $validated['tgl_lahir'];
+        $data->role = $validated['role'];
         $data->save();
         return redirect()->route('users')->withMessage('success', 'Success Edit Users');
     }

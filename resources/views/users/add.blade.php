@@ -69,6 +69,18 @@
 
                             <x-input-error :messages="$errors->get('tgl_lahir')" class="mt-2" />
                         </div>
+                        <!-- role -->
+                        <div class="mt-4">
+                            <x-input-label for="role" :value="__('Role')" />
+
+                            <select name="role" id="role" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                <option>Role</option>
+                                <option value="user" {{ (old('role') == 'user' ? 'selected' : '')}}>user</option>
+                                <option value="admin" {{ (old('role') == 'admin' ? 'selected' : '')}}>admin</option>
+                            </select>
+
+                            <x-input-error :messages="$errors->get('role')" class="mt-2" />
+                        </div>
 
                         <div class="flex items-center justify-end mt-4">
 

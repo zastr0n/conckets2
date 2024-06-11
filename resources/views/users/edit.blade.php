@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Create User') }}
+            {{ __('Edit User') }}
         </h2>
     </x-slot>
 
@@ -51,6 +51,18 @@
                             <x-text-input id="tgl_lahir" class="block mt-1 w-full" type="date" name="tgl_lahir" required value="{{$data->tgl_lahir}}" />
 
                             <x-input-error :messages="$errors->get('tgl_lahir')" class="mt-2" />
+                        </div>
+                        <!-- role -->
+                        <div class="mt-4">
+                            <x-input-label for="role" :value="__('Role')" />
+
+                            <select name="role" id="role" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                <option>Role</option>
+                                <option value="user" {{ ($data->role == 'user' ? 'selected' : '')}}>user</option>
+                                <option value="admin" {{ ($data->role == 'admin' ? 'selected' : '')}}>admin</option>
+                            </select>
+
+                            <x-input-error :messages="$errors->get('role')" class="mt-2" />
                         </div>
 
                         <div class="flex items-center justify-end mt-4">
