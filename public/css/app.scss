@@ -1,0 +1,34 @@
+body {
+    display: grid;
+    place-content: center;
+    margin: 0;
+    height: 100vh;
+    background: #222;
+    color: #ddd;
+    font: italic clamp(1.25em, 15vw, 7em)/ 1.25 
+      marck script, purisa, segoe script, comic sans ms, cursive;
+    text-align: center
+  }
+  
+  p { isolation: isolate }
+  
+  a {
+    position: relative;
+    padding: 0 .25em;
+    color: gold;
+    text-decoration: none;
+    
+    &::after {
+      position: absolute;
+      top: 0; bottom: 0; right: 0; left: 0;
+      transform-origin: 0 100%;
+      transform: scaley(.05);
+      background: currentColor;
+      mix-blend-mode: difference;
+      transition: transform .25s;
+      content: ''
+    }
+    
+    &:focus { outline: none }
+    &:focus, &:hover { &::after { transform: none } }
+  }

@@ -24,5 +24,14 @@ Route::middleware('auth')->group(function () {
     Route::post('/users', [UsersController::class, 'update'])->name('users.update');
     Route::get('/users-delete/{id}', [UsersController::class, 'destroy'])->name('users.destroy');
 });
+ 
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::view('/lineup', 'lineup');
+Route::view('/schedule', 'schedule');
+Route::view('/about', 'about');
+Route::view('/faq', 'faq');
 
 require __DIR__ . '/auth.php';
