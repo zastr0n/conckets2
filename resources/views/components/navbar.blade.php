@@ -1,4 +1,4 @@
-<nav class="g-gradient-to-r from-white to-black bg-cover shadow-md py-4 fixed top-0 left-0 w-full z-10 backdrop-filter backdrop-blur-sm">
+<nav class="g-gradient-to-r from-white to-black bg-cover shadow-md py-4 sticky top-0 left-0 w-full z-10 backdrop-filter backdrop-blur-sm">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
             <a href="#" class="text-lg font-bold text-indigo-600">

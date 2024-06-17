@@ -11,7 +11,7 @@
     <x-navbar/> 
     <x-hero/>
     <x-features/>
-    <x-call-to-action/>
+    <x-call-to-action :data="$data"/>
     <x-footer/>
 
     <script src="{{ asset('js/app.js') }}"></script>
