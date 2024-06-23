@@ -1,11 +1,8 @@
 <?php
-return[
-    // Set your Merchant Server Key
-\Midtrans\Config::$serverKey = '<your server key>';
-// Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-\Midtrans\Config::$isProduction = false;
-// Set sanitization on (default)
-\Midtrans\Config::$isSanitized = true;
-// Set 3DS transaction for credit card to true
-\Midtrans\Config::$is3ds = true;
-]
+return [
+    'serverKey' => env('MIDTRANS_SERVER_KEY'),
+    'isProduction' => env('MIDTRANS_IS_PRODUCTION'),
+    'isSanitized' => env('MIDTRANS_IS_SANITIZED'),
+    'is3ds' => env('MIDTRANS_IS_3DS'),
+
+];
