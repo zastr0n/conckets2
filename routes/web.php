@@ -38,12 +38,19 @@ Route::middleware('auth')->group(function () {
 });
  
 Route::get('/home', function () {
-    return view('home');
-});
-
-Route::view('/lineup', 'lineup');
-Route::view('/schedule', 'schedule');
-Route::view('/about', 'about');
-Route::view('/faq', 'faq');
+    return view('home');    
+})->name('home');
+Route::get('/lineup', function () {
+    return view('lineup');    
+})->name('lineup');
+Route::get('/schedule', function () {
+return view('schedule');    
+})->name('schedule');
+Route::get('/about', function () {
+    return view('about');    
+})->name('about');
+Route::get('/faq', function () {
+    return view('faq');    
+})->name('faq');
 
 require __DIR__ . '/auth.php';

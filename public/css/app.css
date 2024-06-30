@@ -1,6 +1,40 @@
 /*
 ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
+/* Custom css */
+/* Primary Colors */
+bg-hsr-primary bg-[#1F2B56]
+text-hsr-primary text-[#1F2B56]
+
+/* Accent Colors */
+bg-hsr-accent bg-[#FF69B4]
+text-hsr-accent text-[#FF69B4]
+
+/* Other Colors */
+bg-hsr-dark bg-[#222A4D]
+text-hsr-light text-[#FFFFFF]
+
+/* Font Family (Assuming you've added it) */
+font-hsr font-[Roboto]
+
+/* Font Weights */
+font-normal
+font-medium
+font-bold
+
+/* Text Styles */
+text-hsr-heading text-4xl font-bold text-hsr-primary
+text-hsr-body text-base font-medium text-hsr-light
+
+/* Buttons */
+.btn-hsr {
+  @apply rounded-md bg-gradient-to-r from-hsr-primary to-hsr-accent py-2 px-4 text-hsr-light font-bold shadow-md hover:shadow-lg;
+}
+
+/* Cards */
+.card-hsr {
+  @apply bg-hsr-dark rounded-lg shadow-md overflow-hidden;
+}
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)

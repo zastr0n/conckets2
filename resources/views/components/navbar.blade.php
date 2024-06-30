@@ -6,19 +6,19 @@
             </a>
             <ul class="flex space-x-8">
                 <li>
-                    <a href="/home" class="mix-blend-difference text-white shadow-lg font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">HOME</a>
+                    <a href="{{ route('home')}}" class="text-shadow-md text-shadow-black mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">HOME</a>
                 </li>
                 <li>
-                    <a href="/lineup" class="mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">LINE UP</a>
+                    <a href="{{ route("lineup")}}" class="text-shadow-md text-shadow-black mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">LINE UP</a>
                 </li>
                 <li>
-                    <a href="/schedule" class="mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">SCHEDULE</a>
+                    <a href="{{ route("schedule")}}" class="text-shadow-md text-shadow-black mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">SCHEDULE</a>
                 </li>
                 <li>
-                    <a href="/about" class="mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">ABOUT</a>
+                    <a href="{{ route("about")}}" class="text-shadow-md text-shadow-black mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">ABOUT</a>
                 </li>
                 <li>
-                    <a href="/faq" class="mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">FAQ</a>
+                    <a href="{{ route("faq")}}" class="text-shadow-md text-shadow-black mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">FAQ</a>
                 </li>
             </ul>
         </div>

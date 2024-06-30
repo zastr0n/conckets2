@@ -10,8 +10,8 @@
     Konser asik, apalagi bareng kamu!
 </p>
 
-        <button class="bg-white text-indigo-600 font-bold py-2 px-4 rounded hover:bg-indigo-700 hover:text-white transition duration-200 relative z-10">
-            Learn More
-        </button>
+        <a href="{{ route("lineup")}}" class="bg-white text-indigo-600 font-bold py-2 px-4 rounded hover:bg-indigo-700 hover:text-white transition duration-200 relative z-10">
+            See the Lineup!
+        </a>
     </div>
 </section>
