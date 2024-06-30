@@ -10,9 +10,9 @@
 <body class="bg-black"> 
     
     <x-navbar/> 
-    <x-hero/> 
-    <x-call-to-action/>
+    <x-hero/>
     <x-features/>
+    <x-call-to-action :data="$data"/>
     <x-footer/>
 
     <script src="{{ asset('js/app.js') }}"></script>

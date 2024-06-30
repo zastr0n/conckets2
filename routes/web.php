@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\PemesananController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -37,9 +38,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/transaksi/update', [PemesananController::class, 'update'])->name('transaksi.update');
 });
  
-Route::get('/home', function () {
-    return view('home');    
-})->name('home');
+
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/pembayaran', [HomeController::class, 'payment']);
+
+
 Route::get('/lineup', function () {
     return view('lineup');    
 })->name('lineup');
@@ -52,5 +55,6 @@ Route::get('/about', function () {
 Route::get('/faq', function () {
     return view('faq');    
 })->name('faq');
+
 
 require __DIR__ . '/auth.php';
