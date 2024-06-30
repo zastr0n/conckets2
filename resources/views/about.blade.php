@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <x-icon-app/>
     <title>About</title>
-    @vite('resources/css/app.css') 
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-black"> 
     
     <x-navbar />
 
-    <div class="bg-[url('/images/about.png')] bg-cover bg-center py-64 relative shadow-xl">
+    <div class="bg-[url('/public/images/about.png')] bg-cover bg-center py-64 relative shadow-xl">
 
       <div class="container mx-auto px-4 text-center">
           <div class="absolute inset-0 bg-black opacity-25"></div> 
@@ -19,7 +19,7 @@
               About
           </h1>
           <p class="xt-2xl md:text-3xl lg:text-4xl mb-8 text-white relative z-10 font-bold font-mono transition-all duration-300
-              before:absolute before:inset-0 before:bg-[url('/images/winter.jpg')] before:mix-blend-multiply before:opacity-0 before:transition-opacity before:duration-300 
+              before:absolute before:inset-0 before:bg-[url('/public/images/winter.jpg')] before:mix-blend-multiply before:opacity-0 before:transition-opacity before:duration-300 
                hover:text-black hover:before:opacity-100">
                Tentang Konser ini.
           </p>
@@ -47,6 +47,6 @@
       
     <x-footer />
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 </body>
 </html>
