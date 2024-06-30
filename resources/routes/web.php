@@ -38,19 +38,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/transaksi/update', [PemesananController::class, 'update'])->name('transaksi.update');
 });
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Authentication Routes...
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('/home', [HomeController::class, 'index']);
 Route::get('/pembayaran', [HomeController::class, 'payment']);
-Route::get('/lineup', function () {
-    return view('lineup');
-})->name('lineup');
-Route::get('/schedule', function () {
-    return view('schedule');
-})->name('schedule');
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-Route::get('/faq', function () {
-    return view('faq');
-})->name('faq');
+
+Route::view('/lineup', 'lineup');
+Route::view('/schedule', 'schedule');
+Route::view('/about', 'about');
+Route::view('/faq', 'faq');
 
 require __DIR__ . '/auth.php';

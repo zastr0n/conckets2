@@ -2,7 +2,7 @@
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
             <a href="#" class="text-lg font-bold text-indigo-600">
-                <img src="/images/soundwavelogoclean.png" alt="Logo" class="h-20">
+                <img src=""{{ asset('public/images/soundwavelogoclean.png')}}" alt="Logo" class="h-20">
             </a>
             <ul class="flex space-x-8">
                 <li>

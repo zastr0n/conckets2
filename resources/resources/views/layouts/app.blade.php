@@ -10,16 +10,16 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link rel="stylesheet" href="{{ asset('assets/css/datatables.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/assets/css/datatables.css') }}">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/datatables.js') }}"></script>
-    <script src="{{ asset('assets/js/tailwind.js') }}"></script>
-    <script src="{{ asset('assets/js/datatablesTailwind.js') }}"></script>
+    <script src="{{ asset('public/assets/js/datatables.js') }}"></script>
+    <script src="{{ asset('public/assets/js/tailwind.js') }}"></script>
+    <script src="{{ asset('public/assets/js/datatablesTailwind.js') }}"></script>
 </head>
 
 <body class="font-sans antialiased">
