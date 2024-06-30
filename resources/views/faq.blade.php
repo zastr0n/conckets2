@@ -8,7 +8,7 @@
     <title>FAQ</title>
     @vite('resources/css/app.css') 
 </head>
-<body class="bg-purple-200"> 
+<body class="bg-black"> 
     
     <x-navbar />
 

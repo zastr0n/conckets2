@@ -6,7 +6,7 @@
             </a>
             <ul class="flex space-x-8">
                 <li>
-                    <a href="{{ route('home')}}" class="text-shadow-md text-shadow-black mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">HOME</a>
+                    {{-- <a href="{{ route('home')}}" class="text-shadow-md text-shadow-black mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">HOME</a> --}}
                 </li>
                 <li>
                     <a href="{{ route("lineup")}}" class="text-shadow-md text-shadow-black mix-blend-difference text-white font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-500">LINE UP</a>
