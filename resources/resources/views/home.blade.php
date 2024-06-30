@@ -6,7 +6,7 @@
     <title>Soundwave!</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-gradient-to-r from-purple-500 to-pink-500"> 
+<body class="bg-black"> 
     
     <x-navbar/> 
     <x-hero/>
