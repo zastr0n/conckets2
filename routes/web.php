@@ -41,9 +41,17 @@ Route::middleware('auth')->group(function () {
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/pembayaran', [HomeController::class, 'payment']);
 
-Route::view('/lineup', 'lineup');
-Route::view('/schedule', 'schedule');
-Route::view('/about', 'about');
-Route::view('/faq', 'faq');
+Route::get('/lineup', function () {
+    return view('lineup');
+})->name('lineup');
+Route::get('/schedule', function () {
+    return view('schedule');
+})->name('schedule');
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
 
 require __DIR__ . '/auth.php';
