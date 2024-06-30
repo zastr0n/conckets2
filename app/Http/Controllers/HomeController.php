@@ -45,8 +45,10 @@ class HomeController extends Controller
                 'email' => Auth::user()->email,
             )
         );
-
-        $snapToken = \Midtrans\Snap::getSnapToken($params);
-        return view('payment', compact('data', 'snapToken'));
-    }
+// dd(config('midtrans.serverKey'));
+$snapToken = \Midtrans\Snap::getSnapToken($params);
+$transaction->snap_token = $snapToken;
+$transaction->save();
+return view('payment', compact('data', 'snapToken','transaction'));
+}
 }
