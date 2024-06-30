@@ -42,7 +42,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/pembayaran', [HomeController::class, 'payment']);
 
-
 Route::get('/lineup', function () {
     return view('lineup');    
 })->name('lineup');
